@@ -1,0 +1,16 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700';
+
+
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+  background: linear-gradient(to right top, #244F50, white);
+}
+
+html, body {
+  height: 100%;
+}
+
+

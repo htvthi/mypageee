@@ -1,0 +1,39 @@
+<div class="centered-content">
+  <div class="content-manager-container">
+    <div class="sidebar">
+      <h1 class="title has-text-primary">List</h1>
+
+      <div class = "list-menu">
+
+          <a [routerLink]="['/about']">about</a><br>
+          <a [routerLink]="['/photos']">photos</a>
+
+      </div>
+
+    </div>
+    <div class = about-container>
+      <h1 class="title has-text-primary"> Content</h1>
+      <div class = inside>
+        <div *ngIf="selectedId == 0" class="container">
+          <div *ngFor="let pic of pix  let i=index; trackBy: trackByData">
+            <img src="'${{pic.path}}'" width = 650px/>
+            <br>
+
+          </div>
+        </div>
+        <div *ngIf="pic">
+          console.log( {{selectedId}})
+          <img src="'${{pic.path}}'" width = 650px/>
+          <p><a [routerLink]="['/photos/']">Back to back</a></p>
+          <app-form [data]="pic"></app-form>
+        </div>
+      </div>
+
+      <div class="flex">
+
+        <input type="button" class="flex-child" id="delete_button" (click)="delete()" value="Delete">
+        <input type="button" class="flex-child" id="update_button"  (click)="update1()"value="Update">
+
+      </div>
+
+    </div> </div></div>
