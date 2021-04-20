@@ -82,7 +82,7 @@ Pic.remove = (id, result) => {
 };
 
 Pic.removeAll = result => {
-    sql.query("DELETE FROM members", (err, res) => {
+    sql.query("DELETE FROM photos", (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

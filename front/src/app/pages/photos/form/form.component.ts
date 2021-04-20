@@ -24,7 +24,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.form.patchValue({
         idControl: this.data?.id,
-        firstNameControl: this.data?.path,
+        pathControl: this.data?.path,
       }
     );
 
@@ -38,7 +38,7 @@ export class FormComponent implements OnInit {
   onUpdate(): void {
     const values = this.form.value;
     this.data.id = values.idControl;
-    this.data.path = values.firstNameControl;
+    this.data.path = values.pathControl;
 
 }
 }
